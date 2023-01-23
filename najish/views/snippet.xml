@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+    <template id="snippet_najish" name="Najish">
+      <section class="container">
+        <div class="row">
+          <h1>Hello everyone!</h1>
+          <p>This is najish</p>
+        </div>
+      </section>
+    </template>
+    <template id="snippet_job_search" name="Job Search">
+      <section class="container">
+        <form class="input-group my-5 mx-auto">
+          <input style="width: 500px;" type="search" class="form-control"
+            placeholder="Search jobs"
+            aria-label="Search jobs" aria-describedby="Search jobs by job title" />
+        </form>
+      </section>
+    </template>
+    <template id="external_snippets" inherit_id="website.snippets">
+      <xpath expr="//div[@id='snippet_feature']//t[@t-snippet][last()]" position="after">
+        <t t-snippet="najish.snippet_najish" />
+        <t t-snippet="najish.snippet_job_search" />
+      </xpath>
+    </template>
+  </data>
+</odoo>

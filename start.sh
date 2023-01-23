@@ -1,0 +1,1 @@
+/odoo/odoo-server/start.sh

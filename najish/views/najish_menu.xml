@@ -1,0 +1,12 @@
+<odoo>
+    <record id="action_najish_notes" model="ir.actions.act_window">
+        <field name="name">Najish Notes</field>
+        <field name="res_model">najish.notes</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- Menu item to open the Book list -->
+    <menuitem id="menu_najish" name="Najish" />
+    <menuitem id="menu_najish_notes" name="Notes" parent="najish.menu_najish"
+        action="action_najish_notes" />
+    <!-- <menuitem name="Najish Dashboard" id="najish_dashboard" /> -->
+</odoo>

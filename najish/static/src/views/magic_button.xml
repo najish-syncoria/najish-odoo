@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="najish.MagicButton" owl="1">
+        <button t-att-class="props.btnClass" t-on-click="handleMagic">
+            <t t-esc="props.title" />
+        </button>
+    </t>
+    <t t-name="najish.ListView.Buttons" t-inherit="web.ListView.Buttons" t-inherit-mode="primary"
+        owl="1">
+        <xpath expr="//button[@class='btn btn-primary o_list_button_add']" position="after">
+            <!-- <button t-att-class="'btn btn-primary o_list_button_add'" t-on-click="handleMagic">
+            Magic
+            </button> -->
+            <MagicButton btnClass="'btn btn-primary o_list_button_add ml-2'" title="'Magic'" />
+            <MagicButton btnClass="'btn btn-primary o_list_button_add ml-2'" title="'Work'" />
+        </xpath>
+    </t>
+    <!-- <t t-name="najish.ListRenderer" t-inherit="web.ListRenderer" t-inherit-mode="primary"
+    owl="1">
+        <xpath expr="//div[@t-ref='root']" position="before">
+
+        <button
+    t-att-class="props.btnClass" t-on-click="handleMagic">
+            <t t-esc="props.title" />
+    </button>
+    </t> -->
+</templates>
